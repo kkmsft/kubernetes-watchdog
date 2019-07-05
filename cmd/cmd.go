@@ -125,7 +125,7 @@ func init() {
 	// Leader Election Flags
 	runCmd.PersistentFlags().StringVarP(&cfg.LeaderElectionNamespace, "leader-election-namespace", "n", "default", "namespace to create leader election object, 'default' namespace is default")
 	runCmd.PersistentFlags().DurationVarP(&cfg.LeaderElectionTtl, "leader-election-ttl", "", time.Second*30, "leader election ttl")
-	runCmd.PersistentFlags().StringVarP(&cfg.LeaderElectionId, "leader-election-id", "", "kbuernetes-watchdog", "leader election id (should be unique within cluster)")
+	runCmd.PersistentFlags().StringVarP(&cfg.LeaderElectionId, "leader-election-id", "", "kubernetes-watchdog", "leader election id (should be unique within cluster)")
 
 	hostName, err := os.Hostname()
 	if nil != err {
